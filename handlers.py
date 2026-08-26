@@ -455,7 +455,7 @@ async def payment_confirmed(callback: CallbackQuery, state: FSMContext):
     db.update_product_stock(data['product_id'], False)
     
     await callback.message.edit_text(
-        "Спасибо за покупку, в течение 15 минут вы получите товар!\n\n"
+        "Спасибо за покупку, в течение 30 минут вы получите товар!\n\n"
         f"🔑 Код товара: <code>/{product_code}</code>",
         parse_mode='HTML'
     )
